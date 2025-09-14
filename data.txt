@@ -1,0 +1,13 @@
+class Student:
+    def __init__(self):
+        print("constructor")
+
+    def test(self):
+        print("Hello")
+
+    def test1(self):
+        print("Welcome")
+
+obj = Student()
+obj1 = Student()
+obj3 = Student()
