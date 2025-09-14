@@ -1,31 +1,18 @@
-class Company:
-    companyname = "IBM"
-    def __init__(self,id,name,city):
-        self.id = id
-        self.name = name
-        self.city = city
+class A:
+    def m17(self):
+        print("in m1 from A")
+class B(A):
+    def m11(self):
+        print("in m1 from B")
+class C(A):
+    def m15(self):
+        print("in m1 from C")
+class D(B,C):
+    def m2(self):
+        print("in m1 from D")
 
-    def show(self):
-        print("Company Name:",Company.companyname)
-        print("ID:",self.id)
-        print("Name:",self.name)
-        print("City:",self.city)
-
-    @staticmethod
-    def add(x,y):
-        return x+y
-
-    @classmethod
-    def companyname_change(cls):
-        cls.companyname = "Infosys"
-
-
-obj = Company(101,'Rahul','Pune')
-obj.show()
-Company.companyname_change()
-
-
-obj.show()
+obj = D()
+obj.m1()
 
 result = obj.add(100,300)
 print(result)
